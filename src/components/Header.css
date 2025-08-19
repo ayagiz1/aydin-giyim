@@ -1,6 +1,6 @@
+/*------------------------ SITE-HEADER --------------------------*/
 .site-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--background-color);
@@ -8,11 +8,49 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-primary);
+.site-header div {
+    padding: 0.25rem 2.5rem;
+}
 
+
+
+/*------------------------ HEADER-CONTENT --------------------------*/
+.logo {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.3rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-shadow:
+        2px 2px 2px var(--border-color),
+        4px 4px 2px var(--border-color),
+        6px 6px 2px var(--border-color),
+        8px 8px 2px var(--border-color);
+}
+
+.logo:hover {
+    transform: scale(1.15);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+
+
+/*------------------------ MAIN-NAV --------------------------*/
+.main-nav {
+    margin: 0 0 0 2rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .main-nav ul {
@@ -23,13 +61,82 @@
     gap: 1.5rem;
 }
 
+.main-nav ul li {
+    margin: 0rem 1rem;
+}
+
 .main-nav a {
+    display: inline-block;
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
 }
 
 .main-nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
+    background-color: var(--border-color);
+}
+
+
+
+/*------------------------ MEDIA QUERIES --------------------------*/
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: row; /* Logo ve hamburger butonunu yan yana getirmek için */
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative; /* z-index'in çalışması için gerekli */
+        z-index: 1001;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 1001;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-nav {
+        transform: translateX(100%); /* Menüyü ekranın dışına, sağa doğru gizliyoruz */
+        position: fixed; /* Menüyü tam ekran kaplayan bir katman haline getiriyoruz */
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-nav.menu-open {
+        transform: translateX(0);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .main-nav a {
+        font-size: 1.5rem;
+    }
 }

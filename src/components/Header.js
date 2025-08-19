@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import './Header.css';
 
 const Header = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <header className="site-header">
             <div className="header-content">
-                AYDIN GİYİM
+                <a href="/" className="logo">AYDIN GİYİM</a>
+
+                <button
+                    className="menu-toggle"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    ☰
+                </button>
             </div>
-            <span className="header-separator">|</span>
-            <nav className="main-nav">
+            <nav className={`main-nav ${menuOpen ? 'menu-open' : ''}`}>
                 <ul>
                     <li><a href="/hakkimizda">Hakkımızda</a></li>
                     <li><a href="/urunler">Ürünler</a></li>
