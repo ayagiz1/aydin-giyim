@@ -1,0 +1,100 @@
+.hero-container {
+    display: flex;
+    /* İçindeki iki resmi yan yana getirecek */
+    position: relative;
+    /* Yazı içeriğini üzerine konumlandırmak için */
+    color: white;
+    /* ARTIK SABİT BİR YÜKSEKLİK VERMİYORUZ, KENDİSİ BÜYÜYECEK */
+}
+
+.hero-image {
+    width: 50%;
+    /* Her bir resim alanın yarısını kaplasın */
+    height: auto;
+    /* Resmin en-boy oranını korumasını sağlar */
+    object-fit: cover;
+    /* Resim, kendi alanını taşmadan, oranını koruyarak doldursun */
+}
+
+/* YENİ OLUŞTURULAN RESİM DIV'LERİ İÇİN GENEL STİL */
+.hero-bg-image {
+    flex: 1;
+    /* Her birinin mevcut alanın yarısını kaplamasını sağlar (width: 50% gibi) */
+    background-size: cover;
+    /* RESMİN ORANINI KORU, GERİLMEDEN ALANI KAPLA */
+    background-position: center;
+    /* Resmin merkezini odak noktası al */
+    transition: transform 0.5s ease;
+    /* Üzerine gelince efekt için */
+}
+
+/* Üzerine gelince resimlere hafif bir zoom efekti */
+.hero-bg-image:hover {
+    transform: scale(1.05);
+}
+
+/* YAZI İÇERİĞİ STİLLERİ */
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+}
+
+
+/* Başlık, alt başlık ve buton stilleri aynı kalabilir */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 768px) {
+    .hero-container {
+        /* Mobilde resimleri alt alta getirelim */
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
