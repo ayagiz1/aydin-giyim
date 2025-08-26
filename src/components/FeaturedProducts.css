@@ -1,0 +1,85 @@
+/* FeaturedProducts.css */
+
+.featured-products-container {
+
+    min-height: 400px;
+}
+
+.featured-products-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mini-product-card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.mini-product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.mini-product-card img {
+    width: 100%;
+    height: 66.6%;
+    object-fit: cover;
+}
+
+.mini-card-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.mini-card-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.mini-card-info h4 {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.product-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- MOBİL UYUMLULUK --- */
+@media (max-width: 768px) {
+    .featured-products-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-carousel {
+        padding: 0.5rem;
+    }
+
+    .mini-product-card {
+        width: 200px;
+    }
+}
