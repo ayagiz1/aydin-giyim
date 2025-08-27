@@ -1,6 +1,5 @@
 /* ------------------------------- FEATURED-PRODUCTS-CONTAINER ---------------------------- */
 .featured-products-container {
-
     min-height: 400px;
 }
 
@@ -130,6 +129,10 @@
 
     .next-button {
         right: -20px;
+    }
+
+    .carousel-wrapper{
+        margin-bottom: 1.5rem ;
     }
 
     .product-carousel {

@@ -1,0 +1,95 @@
+/* -------------------------- CAMPAIGNS-CONTAINER -------------------------- */
+.campaigns-container {
+    min-height: 400px;
+}
+
+.campaigns-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+
+
+/* -------------------------- CAMPAIGN-LIST -------------------------- */
+.campaign-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+}
+
+.campaign-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.campaign-item:hover {
+    background-color: #e0f0ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.campaign-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+}
+
+
+
+/* -------------------------- CAMPAIGN-TEXT -------------------------- */
+.campaign-text {
+    display: flex;
+    flex-direction: column;
+    /* Başlık ve tarihi alt alta getirmek için */
+}
+
+.campaign-title {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.campaign-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* -------------------------- MEDIA-QUERIES -------------------------- */
+@media (max-width: 768px) {
+    .campaigns-container h2 {
+        font-size: 1.5rem;
+    }
+    .campaign-list{
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .campaign-list {
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    .campaign-list::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .campaign-list::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}

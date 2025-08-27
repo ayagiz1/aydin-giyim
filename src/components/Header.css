@@ -87,7 +87,7 @@
 /*------------------------ MEDIA QUERIES --------------------------*/
 @media (max-width: 768px) {
     .site-header {
-        flex-direction: row; /* Logo ve hamburger butonunu yan yana getirmek için */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding-top: 1.5rem;
@@ -96,7 +96,7 @@
 
     .menu-toggle {
         display: block;
-        position: relative; /* z-index'in çalışması için gerekli */
+        position: relative;
         z-index: 1001;
     }
 
@@ -113,8 +113,8 @@
     }
 
     .main-nav {
-        transform: translateX(100%); /* Menüyü ekranın dışına, sağa doğru gizliyoruz */
-        position: fixed; /* Menüyü tam ekran kaplayan bir katman haline getiriyoruz */
+        transform: translateX(100%);
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;

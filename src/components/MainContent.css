@@ -10,7 +10,7 @@
     flex-basis: 0;
     flex-grow: 2;
     max-width: 66.6%;
-    background-color: #4f7cd68f ;
+    background-color: #adc2ec;
     padding: 4rem 4rem 4rem 9rem;
 }
 
@@ -18,8 +18,8 @@
     flex-basis: 0;
     flex-grow: 1;
     max-width: 33.3%;
-    padding: 4rem 8rem 4rem 3rem;
-    background-color: #01012b6e;
+    padding: 4rem 5rem 4rem 3rem;
+    background-color: #e0e8fa;
 }
 
 /* -----------------------MEDIA QUERIES -------------------- */
@@ -38,6 +38,16 @@
     }
 }
 
+@media (max-width: 1200px) and (min-width: 769px) {
+    .featured-products-container {
+        padding: 4rem 4rem 4rem 5rem;
+    }
+    
+    .campaigns-container {
+        padding: 4rem 1.5rem 4rem 3rem;
+    }
+}
+
 @media (min-width: 1715px) {
     .featured-products-container {
         padding: 6rem 6rem 6rem 20rem;
@@ -45,7 +55,7 @@
     }
 
     .campaigns-container {
-        padding: 6rem 12rem 6rem 5rem;
+        padding: 6rem 15rem 6rem 5rem;
 
     }
 }
