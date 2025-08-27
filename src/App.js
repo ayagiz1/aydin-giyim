@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import CategoryShowcase from './components/CategoryShowcase';
 import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <CategoryShowcase />
       <MainContent />
+      <Footer />
     </div>
   );
 }
