@@ -1,17 +1,62 @@
-/* FeaturedProducts.css */
-
+/* ------------------------------- FEATURED-PRODUCTS-CONTAINER ---------------------------- */
 .featured-products-container {
 
     min-height: 400px;
 }
 
-.featured-products-container h3 {
+.featured-products-container h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--text-primary);
-    text-align: center;
 }
 
+
+
+/* ------------------------------- CAROUSEL-WRAPPER ---------------------------- */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+}
+
+.nav-button:hover {
+    background-color: #fff;
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.prev-button {
+    left: -50px;
+}
+
+.next-button {
+    right: -50px;
+}
+
+
+
+/* ------------------------------- PRODUCT-CAROUSEL ---------------------------- */
 .product-carousel {
     display: flex;
     overflow-x: auto;
@@ -47,19 +92,22 @@
     object-fit: cover;
 }
 
+
+
+/* ------------------------------- MINI-CARD-INFO ---------------------------- */
 .mini-card-info {
     padding: 1rem;
     text-align: left;
 }
 
 .mini-card-info p {
-    margin: 0;
+    margin: 0 0 2rem;
     font-size: 0.9rem;
     color: var(--text-secondary);
 }
 
-.mini-card-info h4 {
-    margin: 0.5rem 0 0;
+.mini-card-info span {
+    margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--text-primary);
@@ -69,10 +117,19 @@
     display: none;
 }
 
-/* --- MOBİL UYUMLULUK --- */
+
+
+/* ------------------------------- MEDIA- QUERIES ---------------------------- */
 @media (max-width: 768px) {
     .featured-products-container h3 {
         font-size: 1.5rem;
+    }
+    .prev-button {
+        left: -20px;
+    }
+
+    .next-button {
+        right: -20px;
     }
 
     .product-carousel {
