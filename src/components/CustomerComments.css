@@ -1,0 +1,146 @@
+/* CustomerComments.css */
+
+.customer-comments-container {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    /* Kenarlardan taşan okları gizlemek için */
+}
+
+.customer-comments-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.comments-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    /* Mobil için varsayılan: Her kart %100 genişliğinde */
+    gap: 2rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem;
+}
+
+/* Her bir yorum kartı */
+.customer-comment {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 20rem;
+    min-height: 150px;
+}
+
+/* Müşteri bilgileri (resim + isim) */
+.customer-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    gap: 1rem;
+    width: 100%;
+}
+
+.customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.customer-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Yorum metni */
+.customer-comment-text p {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.96rem;
+}
+
+/* --- RESPONSIVE GRID KURALLARI --- */
+
+/* Tablet (2 kart) */
+@media (min-width: 768px) {
+    .comments-carousel {
+        grid-auto-columns: calc(50% - 1rem);
+    }
+}
+
+/* Normal Ekran (3 kart) */
+@media (min-width: 1200px) {
+    .comments-carousel {
+        grid-auto-columns: calc(33.33% - 1.34rem);
+    }
+}
+
+/* Büyük Ekran (4 kart) */
+@media (min-width: 1715px) {
+    .comments-carousel {
+        grid-auto-columns: calc(25% - 1.5rem);
+    }
+
+    .carousel-wrapper {
+        max-width: 2000px;
+    }
+}
+
+
+
+/* Navigasyon Okları */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.prev-button {
+    left: -25px;
+    /* Okları karuselin yarım içinde, yarım dışında konumlandırır */
+}
+
+.next-button {
+    right: -25px;
+}
+
+/* Navigasyon Noktaları (Şimdilik sadece iskelet) */
+.carousel-dots {
+    text-align: center;
+    margin-top: 2rem;
+}

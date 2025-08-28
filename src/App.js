@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import CategoryShowcase from './components/CategoryShowcase';
 import MainContent from './components/MainContent';
+import CustomerComments from './components/CustomerComments';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <CategoryShowcase />
       <MainContent />
+      <CustomerComments />
       <Footer />
     </div>
   );
