@@ -69,3 +69,103 @@
         text-align: center;
     }
 }
+
+
+
+
+.site-footer-container {
+    background-color: var(--text-primary);
+    color: #a0aec0;
+    padding: 4rem 5%;
+    /* Yanlardan esnek boşluk bırakıyoruz */
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #4a5568;
+}
+
+.footer-menu {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-menu h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.footer-menu a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #fff;
+}
+
+/* --- SOSYAL MEDYA LİNKLERİ İÇİN DÜZELTME --- */
+.social-links .social-icons {
+    display: flex;
+    flex-direction: column;
+    /* İkon ve yazıları alt alta getirelim */
+    gap: 0.75rem;
+}
+
+.social-links a {
+    display: flex;
+    /* İkon ve yazıyı yan yana getir */
+    align-items: center;
+    /* Dikeyde hizala */
+    gap: 0.75rem;
+    /* Aralarına boşluk bırak */
+    font-size: 1rem;
+    /* Yazı boyutunu diğer linklerle eşitle */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+.social-links a svg {
+    font-size: 1.5rem;
+    /* İkonların boyutunu ayarla */
+}
+
+
+/* --- TELİF HAKKI KISMI --- */
+.footer-bottom {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- MOBİL UYUMLULUK --- */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links .social-icons {
+        /* Mobilde ikonları tekrar yan yana getirelim, daha şık durur */
+        flex-direction: row;
+        justify-content: center;
+    }
+}

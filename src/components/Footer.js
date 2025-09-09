@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-import { FaInstagram, FaFacebook, FaWhatsapp, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
 
@@ -33,10 +33,12 @@ const Footer = () => {
 
                     <div className="footer-menu social-links">
                         <h3>Bizi Takip Edin</h3>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /> Facebook</a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /> Twitter</a>
-                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a>
+                        <div className="social-icons">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /><span>Instagram</span> </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /><span>Facebook</span></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /><span>X (Twitter)</span></a>
+                            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer"><FaWhatsapp /><span>WhatsApp</span></a>
+                        </div>
                     </div>
 
                 </div>

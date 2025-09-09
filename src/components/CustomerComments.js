@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './CustomerComments.css'
 import imagePP from '../assets/default-pp.jpg';
 
@@ -35,46 +35,62 @@ const CustomerComments = () => {
 
         {
             id: 5,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim5",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         },
 
         {
             id: 6,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim6",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         },
 
         {
             id: 7,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim7",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         },
 
         {
             id: 8,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim8",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         },
 
         {
             id: 9,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim9",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         },
 
         {
             id: 10,
-            name: "Isim Soyisim",
+            name: "Isim Soyisim10",
             userImage: imagePP,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptas in ipsam ab enim libero non saepe provident, ipsa minima magnam fuga veniam amet accusamus, facere quod magni? Autem, id?"
         }
     ]);
+
+    const carouselRef = useRef(null);
+
+    const scroll = (direction) => {
+        const carousel = carouselRef.current;
+        if (carousel) {
+            const scrollAmount = carousel.offsetWidth;
+
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+            else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }            
+        }
+    };
 
     return (
         <section className='customer-comments-container'>
@@ -82,9 +98,9 @@ const CustomerComments = () => {
             <h2>Sizden Gelenler</h2>
 
             <div className="carousel-wrapper">
-                <button className='nav-button prev-button'>&lt;</button>
+                <button className='nav-button prev-button' onClick={() => scroll('left')}>&lt;</button>
 
-                <div className="comments-carousel">
+                <div className="comments-carousel" ref={carouselRef}>
                     {comments.map(comment => (
                         <div className="customer-comment" key={comment.id}>
                             <div className="customer-info">
@@ -101,7 +117,7 @@ const CustomerComments = () => {
 
                 </div>
 
-                <button className='nav-button next-button'>&gt;</button>
+                <button className='nav-button next-button' onClick={() => scroll('right')}>&gt;</button>
             </div>
 
 
