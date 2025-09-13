@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aydin-giyim/static/css/main.c22777d2.css",
-    "main.js": "/aydin-giyim/static/js/main.c06da80f.js",
+    "main.css": "/aydin-giyim/static/css/main.285f3e66.css",
+    "main.js": "/aydin-giyim/static/js/main.74b0e421.js",
     "static/media/gomlek.jpg": "/aydin-giyim/static/media/gomlek.c7a74f48b39c5670a554.jpg",
     "static/media/kot-pantolon.jpg": "/aydin-giyim/static/media/kot-pantolon.4d8aab834fbe1c457a46.jpg",
     "static/media/hero-casual.jpg": "/aydin-giyim/static/media/hero-casual.b869ee8aeaa9f1bbf115.jpg",
@@ -14,11 +14,11 @@
     "static/media/aksesuar.jpg": "/aydin-giyim/static/media/aksesuar.110bab58389b43aaa704.jpg",
     "static/media/kaban.jpg": "/aydin-giyim/static/media/kaban.17448bb40170d1503fde.jpg",
     "index.html": "/aydin-giyim/index.html",
-    "main.c22777d2.css.map": "/aydin-giyim/static/css/main.c22777d2.css.map",
-    "main.c06da80f.js.map": "/aydin-giyim/static/js/main.c06da80f.js.map"
+    "main.285f3e66.css.map": "/aydin-giyim/static/css/main.285f3e66.css.map",
+    "main.74b0e421.js.map": "/aydin-giyim/static/js/main.74b0e421.js.map"
   },
   "entrypoints": [
-    "static/css/main.c22777d2.css",
-    "static/js/main.c06da80f.js"
+    "static/css/main.285f3e66.css",
+    "static/js/main.74b0e421.js"
   ]
 }
